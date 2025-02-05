@@ -1,0 +1,20 @@
+@model LibraryManagementSystem.Models.Book
+
+@{
+    ViewData["Title"] = "Kitap Detayı";
+}
+
+<h2>Kitap Detayı</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">@Model.Title</h4>
+        <p class="card-text"><strong>Yazar:</strong> @Model.Author</p>
+        <p class="card-text"><strong>Yayın Yılı:</strong> @Model.Year</p>
+        <p class="card-text"><strong>Kategori:</strong> @Model.Category</p>
+    </div>
+</div>
+
+<a class="btn btn-warning mt-3" href="@Url.Action("Edit", new { id = Model.Id })">Düzenle</a>
+<a class="btn btn-secondary mt-3" href="@Url.Action("Index")">Geri Dön</a>
+

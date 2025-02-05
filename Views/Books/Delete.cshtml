@@ -1,0 +1,15 @@
+@model LibraryManagementSystem.Models.Book
+
+@{
+    ViewData["Title"] = "Kitap Sil";
+}
+
+<h2>Kitabı Sil</h2>
+<p><strong>@Model.Title</strong> adlı kitabı silmek istediğinizden emin misiniz?</p>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    
+    <button type="submit" class="btn btn-danger">Sil</button>
+    <a class="btn btn-secondary" href="@Url.Action("Index")">İptal</a>
+</form>
